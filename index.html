@@ -117,6 +117,9 @@
   <!-- CONTACT -->
   <section class="section" id="contact"
   data-aos="fade-up">
+    <p>
+  <button class="btn" onclick="openResume()">View Resume</button>
+</p>
     <h2>Contact</h2>
     <p>Email: jahnivimaram1191@gmail.com</p>
     <p>
@@ -137,6 +140,22 @@
   <script>
     AOS.init({ duration: 1000, once: true });
   </script>
+  <div id="resumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeResume()">×</span>
+    <iframe src="resume.pdf"></iframe>
+  </div>
+</div>
+  <script>
+function openResume() {
+  document.getElementById("resumeModal").style.display = "block";
+}
+
+function closeResume() {
+  document.getElementById("resumeModal").style.display = "none";
+}
+</script>
 </body>
 
 </html>
+
